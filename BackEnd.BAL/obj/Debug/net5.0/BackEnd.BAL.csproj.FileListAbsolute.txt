@@ -1,0 +1,17 @@
+D:\Projects\CI Project\BackEnd\BackEnd.BAL\bin\Debug\net5.0\BackEnd.BAL.deps.json
+D:\Projects\CI Project\BackEnd\BackEnd.BAL\bin\Debug\net5.0\BackEnd.BAL.dll
+D:\Projects\CI Project\BackEnd\BackEnd.BAL\bin\Debug\net5.0\ref\BackEnd.BAL.dll
+D:\Projects\CI Project\BackEnd\BackEnd.BAL\bin\Debug\net5.0\BackEnd.BAL.pdb
+D:\Projects\CI Project\BackEnd\BackEnd.BAL\bin\Debug\net5.0\BackEnd.DAL.dll
+D:\Projects\CI Project\BackEnd\BackEnd.BAL\bin\Debug\net5.0\BackEnd.Entity.dll
+D:\Projects\CI Project\BackEnd\BackEnd.BAL\bin\Debug\net5.0\BackEnd.DAL.pdb
+D:\Projects\CI Project\BackEnd\BackEnd.BAL\bin\Debug\net5.0\BackEnd.Entity.pdb
+D:\Projects\CI Project\BackEnd\BackEnd.BAL\obj\Debug\net5.0\BackEnd.BAL.csproj.AssemblyReference.cache
+D:\Projects\CI Project\BackEnd\BackEnd.BAL\obj\Debug\net5.0\BackEnd.BAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\CI Project\BackEnd\BackEnd.BAL\obj\Debug\net5.0\BackEnd.BAL.AssemblyInfoInputs.cache
+D:\Projects\CI Project\BackEnd\BackEnd.BAL\obj\Debug\net5.0\BackEnd.BAL.AssemblyInfo.cs
+D:\Projects\CI Project\BackEnd\BackEnd.BAL\obj\Debug\net5.0\BackEnd.BAL.csproj.CoreCompileInputs.cache
+D:\Projects\CI Project\BackEnd\BackEnd.BAL\obj\Debug\net5.0\BackEnd.BAL.csproj.CopyComplete
+D:\Projects\CI Project\BackEnd\BackEnd.BAL\obj\Debug\net5.0\BackEnd.BAL.dll
+D:\Projects\CI Project\BackEnd\BackEnd.BAL\obj\Debug\net5.0\ref\BackEnd.BAL.dll
+D:\Projects\CI Project\BackEnd\BackEnd.BAL\obj\Debug\net5.0\BackEnd.BAL.pdb
