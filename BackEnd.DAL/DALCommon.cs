@@ -106,7 +106,7 @@ namespace BackEnd.DAL
                 using (SqlConnection cnn = new SqlConnection(_cIDbContext.CreateConnection().ConnectionString))
                 {
                     cnn.Open();
-                    var query = "select Distinct MissionTheme As Text from Missions";
+                    var query = "select Distinct MT.ThemeName As Text,MT.ID AS Value from Missions M join MissionTheme MT ON MT.Id = M.MissionThemeId AND MT.IsDeleted=0 where M.IsDeleted = 0";
                     missionTheme = cnn.Query<DropDown>(query, null, null, true, 0, CommandType.Text).ToList();
                 }
             }
@@ -125,7 +125,7 @@ namespace BackEnd.DAL
                 using (SqlConnection cnn = new SqlConnection(_cIDbContext.CreateConnection().ConnectionString))
                 {
                     cnn.Open();
-                    var query = "select Distinct M.MissionSkill As Text from Missions M";
+                    var query = "select Distinct MS.SkillName As Text,MS.ID AS Value from MissionSkill MS where MS.IsDeleted = 0";
                     missionSkill = cnn.Query<DropDown>(query, null, null, true, 0, CommandType.Text).ToList();
                 }
             }

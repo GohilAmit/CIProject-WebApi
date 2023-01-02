@@ -18,6 +18,8 @@ namespace BackEnd.Entity
         public int UserId { get; set; }
         [NotMapped]
         public string UserName { get; set; }
+        [NotMapped]
+        public string UserImage { get; set; }
         [Column(TypeName = "datetime")]
         public DateTime AppliedDate { get; set; }        
         public bool Status { get; set; }

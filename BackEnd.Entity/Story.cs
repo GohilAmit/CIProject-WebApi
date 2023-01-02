@@ -27,6 +27,7 @@ namespace BackEnd.Entity
         public string VideoUrl { get; set; }
         public string StoryImage { get; set; }
         public bool IsActive { get; set; }
+        public int? StoryViewerCount { get; set; } = 0;
 
     }
 }

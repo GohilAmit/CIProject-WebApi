@@ -11,7 +11,6 @@ namespace BackEnd.Entity
     public class User : BaseEntity
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -27,12 +26,13 @@ namespace BackEnd.Entity
         public string Message { get; set; }
         [NotMapped]
         public string UserImage { get; set; } = "";
+        [NotMapped]
+        public string UserFullName { get; set; }
     }
 
     public class UserDetail : BaseEntity
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]        
         public int Id { get; set; }
         public int UserId { get; set; }
         public string Name { get; set; }
@@ -67,7 +67,6 @@ namespace BackEnd.Entity
     public class ForgotPassword
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [NotMapped]
         public int TempId { get; set; }
         public string Id { get; set; }

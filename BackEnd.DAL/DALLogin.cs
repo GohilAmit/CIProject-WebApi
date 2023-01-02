@@ -89,13 +89,13 @@ namespace BackEnd.DAL
                     string emailBody = "Hi " + userName + ",<br/><br/> Click the link below to reset your password <br/><br/> " + callbackurl;                    
                     MailMessage mail = new MailMessage();
                     SmtpClient SmtpServer = new SmtpClient();
-                    mail.From = new MailAddress("your email");
+                    mail.From = new MailAddress("amitgohil6935@gmail.com");
                     mail.To.Add(mailTo);
                     mail.Subject = "Reset Password";
                     mail.Body = emailBody;                    
                     mail.IsBodyHtml = true;
                     SmtpServer.UseDefaultCredentials = false;
-                    NetworkCredential NetworkCred = new NetworkCredential("your email", "your password");
+                    NetworkCredential NetworkCred = new NetworkCredential("amitgohil6935@gmail.com", "itslumoeelqqjgmz");
                     SmtpServer.Credentials = NetworkCred;
                     SmtpServer.EnableSsl = true;
                     SmtpServer.Port = 587;

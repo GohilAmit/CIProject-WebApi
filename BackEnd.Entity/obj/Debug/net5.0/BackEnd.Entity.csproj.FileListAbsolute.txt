@@ -2,7 +2,6 @@ D:\Projects\CI Project\BackEnd\BackEnd.Entity\bin\Debug\net5.0\BackEnd.Entity.de
 D:\Projects\CI Project\BackEnd\BackEnd.Entity\bin\Debug\net5.0\BackEnd.Entity.dll
 D:\Projects\CI Project\BackEnd\BackEnd.Entity\bin\Debug\net5.0\ref\BackEnd.Entity.dll
 D:\Projects\CI Project\BackEnd\BackEnd.Entity\bin\Debug\net5.0\BackEnd.Entity.pdb
-D:\Projects\CI Project\BackEnd\BackEnd.Entity\obj\Debug\net5.0\BackEnd.Entity.csproj.AssemblyReference.cache
 D:\Projects\CI Project\BackEnd\BackEnd.Entity\obj\Debug\net5.0\BackEnd.Entity.GeneratedMSBuildEditorConfig.editorconfig
 D:\Projects\CI Project\BackEnd\BackEnd.Entity\obj\Debug\net5.0\BackEnd.Entity.AssemblyInfoInputs.cache
 D:\Projects\CI Project\BackEnd\BackEnd.Entity\obj\Debug\net5.0\BackEnd.Entity.AssemblyInfo.cs
@@ -10,3 +9,4 @@ D:\Projects\CI Project\BackEnd\BackEnd.Entity\obj\Debug\net5.0\BackEnd.Entity.cs
 D:\Projects\CI Project\BackEnd\BackEnd.Entity\obj\Debug\net5.0\BackEnd.Entity.dll
 D:\Projects\CI Project\BackEnd\BackEnd.Entity\obj\Debug\net5.0\ref\BackEnd.Entity.dll
 D:\Projects\CI Project\BackEnd\BackEnd.Entity\obj\Debug\net5.0\BackEnd.Entity.pdb
+D:\Projects\CI Project\BackEnd\BackEnd.Entity\obj\Debug\net5.0\BackEnd.Entity.csproj.AssemblyReference.cache

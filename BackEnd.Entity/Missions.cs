@@ -11,7 +11,6 @@ namespace BackEnd.Entity
     public class Missions : BaseEntity
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string MissionTitle { get; set; }
         public string MissionDescription { get; set; }
@@ -26,18 +25,42 @@ namespace BackEnd.Entity
         //[DataType(DataType.Date)]
         [Column(TypeName = "Date")]
         public DateTime EndDate { get; set; }
-
-        public int TotalSheets { get; set; }
+        public string MissionType { get; set; }
+        public int? TotalSheets { get; set; }
         [Column(TypeName = "Date")]
-        public DateTime RegistrationDeadLine { get; set; }
-        public string MissionTheme { get; set; }
-        public string MissionSkill { get; set; }
+        public DateTime? RegistrationDeadLine { get; set; }
+        public string MissionThemeId { get; set; }
+        public string MissionSkillId { get; set; }
         public string MissionImages { get; set; }
         public string MissionDocuments { get; set; }
-        public string MissionAvilability { get; set; }        
+        public string MissionAvilability { get; set; }
+        public string MissionVideoUrl { get; set; }
         [NotMapped]
         public string CountryName { get; set; }
         [NotMapped]
         public string CityName { get; set; }
+        [NotMapped]
+        public string MissionThemeName { get; set; }
+        [NotMapped]
+        public string MissionSkillName { get; set; }
+        [NotMapped]
+        public string MissionStatus { get; set; }
+        [NotMapped]
+        public string MissionApplyStatus { get; set; }  
+        [NotMapped]
+        public string MissionDateStatus { get; set; }       
+        [NotMapped]
+        public string MissionDeadLineStatus { get; set; } 
+        [NotMapped]
+        public string MissionFavouriteStatus { get; set; }
+        [NotMapped]
+        public int Rating { get; set; }
+    }
+
+    public class SortestData
+    {
+        public int UserId { get; set; }
+        public string SortestValue { get; set; }
+        public int MissionId { get; set; }
     }
 }

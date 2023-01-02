@@ -28,6 +28,40 @@ namespace BackEnd.Controllers
         }
         #region Mission
         [HttpGet]
+        [Route("GetMissionThemeList")]
+        [Authorize]
+        public ResponseResult GetMissionThemeList()
+        {
+            try
+            {
+                result.Data = _balMission.GetMissionThemeList();
+                result.Result = ResponseStatus.Success;
+            }
+            catch (Exception ex)
+            {
+                result.Result = ResponseStatus.Error;
+                result.Message = ex.Message;
+            }
+            return result;
+        }
+        [HttpGet]
+        [Route("GetMissionSkillList")]
+        [Authorize]
+        public ResponseResult GetMissionSkillList()
+        {
+            try
+            {
+                result.Data = _balMission.GetMissionSkillList();
+                result.Result = ResponseStatus.Success;
+            }
+            catch (Exception ex)
+            {
+                result.Result = ResponseStatus.Error;
+                result.Message = ex.Message;
+            }
+            return result;
+        }
+        [HttpGet]
         [Route("MissionList")]
         [Authorize]
         public ResponseResult MissionList()

@@ -63,6 +63,8 @@ namespace BackEnd
             services.AddScoped<BALStory>();
             services.AddScoped<BALAdminUser>();
             services.AddScoped<BALVolunteeringTimesheet>();
+            services.AddScoped<BALMissionSkill>();
+            services.AddScoped<BALMissionTheme>();
             services.AddScoped<DALLogin>();
             services.AddScoped<DALCMS>();           
             services.AddScoped<DALMission>();
@@ -70,6 +72,8 @@ namespace BackEnd
             services.AddScoped<DALStory>();
             services.AddScoped<DALAdminUser>();
             services.AddScoped<DALVolunteeringTimesheet>();
+            services.AddScoped<DALMissionSkill>();
+            services.AddScoped<DALMissionTheme>();
             services.AddScoped<JwtService>();
             services.AddSwaggerGen(c =>
             {

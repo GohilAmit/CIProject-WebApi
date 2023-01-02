@@ -137,39 +137,6 @@ namespace BackEnd.Entity.Migrations
                     b.ToTable("ForgotPassword");
                 });
 
-            modelBuilder.Entity("BackEnd.Entity.Mission", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime?>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("EndDate")
-                        .HasColumnType("Date");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("MissionTitle")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("MissionType")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("ModifiedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("StartDate")
-                        .HasColumnType("Date");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Mission");
-                });
-
             modelBuilder.Entity("BackEnd.Entity.MissionApplication", b =>
                 {
                     b.Property<int>("Id")
@@ -204,6 +171,150 @@ namespace BackEnd.Entity.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("MissionApplication");
+                });
+
+            modelBuilder.Entity("BackEnd.Entity.MissionComment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime?>("CommentDate")
+                        .HasColumnType("datetime");
+
+                    b.Property<string>("CommentDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("MissionId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("ModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MissionComment");
+                });
+
+            modelBuilder.Entity("BackEnd.Entity.MissionFavourites", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("MissionId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("ModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MissionFavourites");
+                });
+
+            modelBuilder.Entity("BackEnd.Entity.MissionRating", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("MissionId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("ModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("Rating")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MissionRating");
+                });
+
+            modelBuilder.Entity("BackEnd.Entity.MissionSkill", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("SkillName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MissionSkill");
+                });
+
+            modelBuilder.Entity("BackEnd.Entity.MissionTheme", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ThemeName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MissionTheme");
                 });
 
             modelBuilder.Entity("BackEnd.Entity.Missions", b =>
@@ -246,25 +357,31 @@ namespace BackEnd.Entity.Migrations
                     b.Property<string>("MissionOrganisationName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("MissionSkill")
+                    b.Property<string>("MissionSkillId")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("MissionTheme")
+                    b.Property<string>("MissionThemeId")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MissionTitle")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("MissionType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MissionVideoUrl")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("ModifiedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("RegistrationDeadLine")
+                    b.Property<DateTime?>("RegistrationDeadLine")
                         .HasColumnType("Date");
 
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("Date");
 
-                    b.Property<int>("TotalSheets")
+                    b.Property<int?>("TotalSheets")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -305,6 +422,9 @@ namespace BackEnd.Entity.Migrations
 
                     b.Property<string>("StoryTitle")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("StoryViewerCount")
+                        .HasColumnType("int");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");

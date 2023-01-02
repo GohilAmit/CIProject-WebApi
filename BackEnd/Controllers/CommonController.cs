@@ -150,6 +150,7 @@ namespace BackEnd.Controllers
 
         [HttpPost]
         [Route("UploadImage")]
+        [Authorize]
         public async Task<IActionResult> UploadImage([FromForm] UploadFile upload)
         {
             string filePath = "";
@@ -186,6 +187,7 @@ namespace BackEnd.Controllers
 
         [HttpPost]
         [Route("ContactUs")]
+        [Authorize]
         public ResponseResult ContactUs(ContactUs contactUs)
         {
             try
@@ -203,6 +205,7 @@ namespace BackEnd.Controllers
 
         [HttpPost]
         [Route("AddUserSkill")]
+        [Authorize]
         public ResponseResult AddUserSkill(UserSkills userSkills)
         {
             try
@@ -219,6 +222,7 @@ namespace BackEnd.Controllers
         }
         [HttpGet]
         [Route("GetUserSkill/{userId}")]
+        [Authorize]
         public ResponseResult GetUserSkill(int userId)
         {
             try

@@ -1,5 +1,6 @@
 ﻿using BackEnd.DAL;
 using BackEnd.Entity;
+using BackEnd.Entity.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,14 @@ namespace BackEnd.BAL
         public BALMission(DALMission dalMission)
         {
             _dalMission = dalMission;
+        }
+        public List<DropDown> GetMissionThemeList()
+        {
+            return _dalMission.GetMissionThemeList();
+        }
+        public List<DropDown> GetMissionSkillList()
+        {
+            return _dalMission.GetMissionSkillList();
         }
         public List<Missions> MissionList()
         {
@@ -35,19 +44,60 @@ namespace BackEnd.BAL
         {
             return _dalMission.DeleteMission(id);
         }
-
-
-        public List<Missions> ClientSideMissionList()
+        public List<MissionApplication> MissionApplicationList()
         {
-            return _dalMission.ClientSideMissionList();
+            return _dalMission.MissionApplicationList();
+        }
+
+        public List<Missions> ClientSideMissionList(int userId)
+        {
+            return _dalMission.ClientSideMissionList(userId);
+        } 
+        public List<Missions> MissionClientList(SortestData data)
+        {
+            return _dalMission.MissionClientList(data);
         }
         public string ApplyMission(MissionApplication missionApplication)
         {
             return _dalMission.ApplyMission(missionApplication);
         }
-        public List<MissionApplication> MissionApplicationList()
+        public Missions MissionDetailByMissionId(SortestData data)
         {
-            return _dalMission.MissionApplicationList();
+            return _dalMission.MissionDetailByMissionId(data);
+        }
+       public string AddMissionComment(MissionComment missionComment)
+        {
+            return _dalMission.AddMissionComment(missionComment);
+        }
+
+        public List<MissionComment> MissionCommentListByMissionId(int missionId)
+        {
+            return _dalMission.MissionCommentListByMissionId(missionId);
+        }
+        public string AddMissionFavourite(MissionFavourites missionFavourites)
+        {
+            return _dalMission.AddMissionFavourite(missionFavourites);
+        } 
+        public string RemoveMissionFavourite(MissionFavourites missionFavourites)
+        {
+            return _dalMission.RemoveMissionFavourite(missionFavourites);
+        } 
+        public string MissionRating(MissionRating missionRating)
+        {
+            return _dalMission.MissionRating(missionRating);
+        }   
+      
+        public List<MissionApplication> RecentVolunteerList(MissionApplication missionApplication)
+        {
+            return _dalMission.RecentVolunteerList(missionApplication);
+        }
+        public List<User> GetUserList(int userId)
+        {
+            return _dalMission.GetUserList(userId);
+        }
+        public string SendInviteMissionMail(List<MissionShareOrInvite> user)
+        {
+            return _dalMission.SendInviteMissionMail(user);
         }
     }
 }

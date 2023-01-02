@@ -21,20 +21,7 @@ namespace BackEnd.Controllers
         {           
             _balLogin = balLogin;
         }
-
-        //[HttpPost]
-        //[Route("Register")]
-        //public async Task<string> RegisterUser(User user)
-        //{
-        //    return await _balLogin.Register(user);
-        //}
-
-        //[HttpPost]
-        //[Route("LoginUser")]
-        //public async Task<string> LoginUser(User user)
-        //{
-        //    return await _balLogin.LoginUser(user);
-        //}
+            
 
         [HttpPost]
         [Route("LoginUser")]
@@ -52,6 +39,7 @@ namespace BackEnd.Controllers
             }
             return result;
         }
+       
 
         [HttpPost]
         [Route("Register")]

@@ -1,5 +1,6 @@
 ﻿using BackEnd.BAL;
 using BackEnd.Entity;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -95,6 +96,7 @@ namespace BackEnd.Controllers
 
         [HttpGet]
         [Route("AdminSideStoryList")]
+        [Authorize]
         public ResponseResult AdminSideStoryList()
         {
             try
@@ -112,6 +114,7 @@ namespace BackEnd.Controllers
        
         [HttpPost]
         [Route("StoryStatusActive")]
+        [Authorize]
         public ResponseResult StoryStatusActive(Story story)
         {
             try
@@ -128,7 +131,8 @@ namespace BackEnd.Controllers
         }
 
         [HttpDelete]
-        [Route("DeleteStory/{id}")]        
+        [Route("DeleteStory/{id}")]
+        [Authorize]
         public ResponseResult DeleteStory(int id)
         {
             try
@@ -146,6 +150,7 @@ namespace BackEnd.Controllers
 
         [HttpGet]
         [Route("StoryDetailByIdAdmin/{id}")]
+        [Authorize]
         public ResponseResult StoryDetailByIdAdmin(int id)
         {
             try

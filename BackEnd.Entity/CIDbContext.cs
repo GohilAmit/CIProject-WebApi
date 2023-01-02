@@ -24,7 +24,6 @@ namespace BackEnd.Entity
         public DbSet<UserDetail> UserDetail { get; set; }
         public DbSet<ForgotPassword> ForgotPassword { get; set; }
         public DbSet<CMS> CMS { get; set; }
-        public DbSet<Mission> Mission { get; set; }
 
         public DbSet<Country> Country { get; set; }
 
@@ -36,5 +35,12 @@ namespace BackEnd.Entity
         public DbSet<VolunteeringGoals> VolunteeringGoals { get; set; }
         public DbSet<MissionApplication> MissionApplication { get; set; }
         public DbSet<UserSkills> UserSkills { get; set; }
+
+        public DbSet<MissionTheme> MissionTheme { get; set; }
+        public DbSet<MissionSkill> MissionSkill { get; set; }
+        public DbSet<MissionComment> MissionComment { get; set; }
+        public DbSet<MissionFavourites> MissionFavourites { get; set; }
+        public DbSet<MissionRating> MissionRating { get; set; }
+
     }
 }

@@ -10,15 +10,13 @@ namespace BackEnd.Entity
     public class Country
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string CountryName { get; set; }
     }
 
     public class City
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]   
         public int Id { get; set; }
 
         public int CountryId { get; set; }
